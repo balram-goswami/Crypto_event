@@ -22,6 +22,8 @@ class UserEvent extends Model
         'event_type',
         'description',
         'image_path',
+        'payment_one',
+        'payment_two'
     ];
 
     public function user()
