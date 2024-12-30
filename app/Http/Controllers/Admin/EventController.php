@@ -50,6 +50,8 @@ class EventController extends Controller
             'event_date' => 'required|date',
             'guest_names' => 'nullable|string',
             'speaker_name' => 'nullable|string',
+            'payment_one' => 'nullable|string',
+            'payment_two' => 'nullable|string',
             'location' => 'required|string|max:255',
             'event_type' => 'required|integer',
             'description' => 'nullable|string',
@@ -62,6 +64,8 @@ class EventController extends Controller
         $event->event_name = $request->event_name;
         $event->event_date = $request->event_date;
         $event->guest_names = $request->guest_names;
+        $event->payment_one = $request->payment_one;
+        $event->payment_two = $request->payment_two;
         $event->speaker_name = $request->speaker_name;
         $event->location = $request->location;
         $event->event_type = $request->event_type;
@@ -180,6 +184,8 @@ class EventController extends Controller
             'event_date' => 'required|date',
             'guest_names' => 'nullable|string',
             'speaker_name' => 'nullable|string',
+            'payment_one' => 'nullable|string',
+            'payment_two' => 'nullable|string',
             'location' => 'required|string|max:255',
             'event_type' => 'required|integer',
             'description' => 'nullable|string',
@@ -202,6 +208,8 @@ class EventController extends Controller
                 'guest_names' => $request->guest_names,
                 'speaker_name' => $request->speaker_name,
                 'location' => $request->location,
+                'payment_one' => $request->payment_one,
+                'payment_two' => $request->payment_two,
                 'type' => 2,
                 'status' => 2,
                 'event_type' => $request->event_type,

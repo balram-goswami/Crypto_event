@@ -135,8 +135,7 @@ class UserEventController extends Controller
 
         $userEvents = UserEvent::where('user_id', auth()->id())
             ->where('type', 1)
-            ->where('status', 2)
-            ->get();
+            ->get(); 
 
         return view('UserView', compact('view', 'Event', 'PaymentHistory', 'createEvent', 'userEvents'));
     }

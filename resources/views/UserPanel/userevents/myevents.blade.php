@@ -108,6 +108,7 @@
                                 <div class="col-md-6 custom-card">
                                     <h4 class="fontsize">{{ $data->event_name }}</h4>
                                     <p class="description fontsize">{{ $data->description }}</p>
+                                    @if($data->status == 2)
                                     <a href="{{ route('viewUserEvent',  $data->id ) }}">
                                         <button class="btn join-btn">View Event</button>
                                     </a>
@@ -123,6 +124,9 @@
                                             <i class="fa fa-trash"></i> Delete
                                         </button>
                                     </form>
+                                    @else
+                                    <h4 class="btn join-btn">Event Under Process</h4>
+                                    @endif
                                 </div>
                                 <div class="col-md-6">
                                     <div class="program-card">
@@ -140,3 +144,5 @@
             @endforeach
         </div>
     </div>
+
+    
