@@ -111,6 +111,18 @@
                                     <a href="{{ route('viewUserEvent',  $data->id ) }}">
                                         <button class="btn join-btn">View Event</button>
                                     </a>
+                                    <a href="{{ route('event.edit', $data->id) }}" class="btn btn-primary">
+                                        <i class="fa fa-edit"></i> Edit
+                                    </a>
+
+                                    <!-- Delete Button -->
+                                    <form action="{{ route('event.delete', $data->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this event?');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger">
+                                            <i class="fa fa-trash"></i> Delete
+                                        </button>
+                                    </form>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="program-card">
