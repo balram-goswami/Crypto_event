@@ -79,17 +79,17 @@
 
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="payment_one" class="form-label">Amount In USDT*</label>
+                            <label for="payment_one" class="form-label">Amount In INR*</label>
                             <div class="input-group input-group-outline mb-3">
-                                <input type="text" class="form-control" name="payment_one" id="payment_one" placeholder="Enter Amount of event ( in USDT )" required>
+                                <input type="text" class="form-control" name="payment_one" id="payment_one" placeholder="Enter Amount of event ( in INR )" required>
                             </div>
                         </div>
 
                         <!-- Event Type -->
                         <div class="col-md-6">
-                            <label for="payment_two" class="form-label">Amount In Crypto*</label>
+                            <label for="payment_two" class="form-label">Amount In USDT*</label>
                             <div class="input-group input-group-outline mb-3">
-                                <input type="text" class="form-control" name="payment_two" id="payment_two" placeholder="Enter Amount of event ( in Crypto )" required>
+                                <input type="text" class="form-control" name="payment_two" id="payment_two" placeholder="Enter Amount of event ( in USDT )" required>
                             </div>
                         </div>
                         </div>
