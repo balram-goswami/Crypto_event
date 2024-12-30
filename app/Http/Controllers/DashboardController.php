@@ -18,6 +18,7 @@ class DashboardController extends Controller
     public function index()
     {
         $view = "UserPanel.dashboard";
+        $userDetails = User::where('id', auth()->id())->get('status')->first();
         $currentUser = getUser(auth()->id());
         $otherEvents = UserEvent::where('type', 1)
             ->where('status', 2)
@@ -26,7 +27,7 @@ class DashboardController extends Controller
             $PaymentHistory = PaymentHistory::where('user_id', auth()->id())
             ->get();
 
-        return view('UserView', compact('view', 'currentUser', 'otherEvents', 'PaymentHistory'));
+        return view('UserView', compact('view', 'currentUser', 'otherEvents', 'PaymentHistory', 'userDetails'));
     }
 
     public function allevents()

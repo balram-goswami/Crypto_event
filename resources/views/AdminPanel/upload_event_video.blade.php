@@ -47,8 +47,8 @@
                             <div class="input-group mb-3"> <!-- Removed input-group-outline -->
                                 <select class="form-select" name="event_type" id="eventType" required>
                                     <option selected disabled>Select Event Type</option>
-                                    @foreach ($eventTypes as $type)
-                                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                    @foreach ($event as $type)
+                                        <option value="{{ $type->id }}">{{ $type->event_name }}</option>
                                     @endforeach
                                 </select>
                             </div>

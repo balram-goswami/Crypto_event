@@ -142,9 +142,10 @@ class EventController extends Controller
     public function upload_event_video()
     {
         $view = "AdminPanel.upload_event_video";
-        $eventTypes = EventType::all();
+        $videos = EventTraning::all();
+        $event = UserEvent::where('type', 2)->get();
 
-        return view('AdminView', compact('view', 'eventTypes'));
+        return view('AdminView', compact('view', 'event', 'videos'));
     }
 
     public function uploadVideo(Request $request)
@@ -163,7 +164,6 @@ class EventController extends Controller
                 ->first();
 
             $orderId = $latestOrder ? $latestOrder->order_id + 1 : 1;
-            // dd($orderId);
             EventTraning::create([
                 'title' => $request->event_name,
                 'event_id' => $request->event_type,
